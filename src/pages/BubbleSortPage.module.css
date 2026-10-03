@@ -1,0 +1,69 @@
+.controls {
+  display: contents;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.input {
+  flex: 1;
+  min-width: 200px;
+  max-width: 420px;
+  padding: 8px 12px;
+  font-size: 13px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--bg-panel);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.input::placeholder {
+  color: var(--text-faint);
+}
+
+.narrow {
+  max-width: 90px;
+  min-width: 70px;
+}
+
+.hint {
+  font-size: 12.5px;
+  color: var(--text-faint);
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elevated);
+  color: var(--text);
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+
+.btnActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btnActive:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}

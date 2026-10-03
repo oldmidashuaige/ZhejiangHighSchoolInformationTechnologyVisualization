@@ -1,0 +1,150 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.key {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.buckets {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.bucket {
+  flex: 1;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.bucketActive {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.bucketLabel {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.chain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chainNode {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 600;
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--border-strong);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.chainKey {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.emptyBucket {
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 16px;
+}
+
+.slots {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slotCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.slot {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-faint);
+  border: 1.5px dashed var(--border-strong);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.slotFilled {
+  color: var(--text);
+  border-style: solid;
+}
+
+.slotKey {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.slotProbe {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.slotIndex {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.legend {
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}

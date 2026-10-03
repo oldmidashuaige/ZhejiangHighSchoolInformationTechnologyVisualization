@@ -1,0 +1,90 @@
+/* 全局样式与主题变量：黑白灰高级配色 + 天蓝唯一强调色 */
+:root {
+  /* 天蓝强调色（唯一彩色） */
+  --accent: #0ea5e9;
+  --accent-strong: #0284c7;
+  --accent-soft: rgba(14, 165, 233, 0.14);
+
+  /* 亮色主题 */
+  --bg: #fafafa;
+  --bg-panel: #ffffff;
+  --bg-elevated: #f4f4f5;
+  --bg-hover: #ececee;
+  --text: #17171a;
+  --text-muted: #737378;
+  --text-faint: #a1a1a6;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  /* 可视化用色 */
+  --bar-fill: #d4d4d8;
+  --bar-fill-sorted: #a1a1a6;
+  --bar-stroke: #52525b;
+  --chart-grid: rgba(0, 0, 0, 0.06);
+
+  --radius: 10px;
+  --font: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", system-ui, -apple-system, sans-serif;
+  --font-mono: "Cascadia Mono", Consolas, "Courier New", monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #0c0c0e;
+  --bg-panel: #161618;
+  --bg-elevated: #1e1e21;
+  --bg-hover: #26262a;
+  --text: #f4f4f5;
+  --text-muted: #a1a1a6;
+  --text-faint: #6b6b70;
+  --border: #26262a;
+  --border-strong: #3f3f46;
+
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+  --bar-fill: #3f3f46;
+  --bar-fill-sorted: #52525b;
+  --bar-stroke: #d4d4d8;
+  --chart-grid: rgba(255, 255, 255, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* 大字号课堂模式 */
+[data-large-font="true"] {
+  font-size: 118%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

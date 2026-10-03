@@ -1,0 +1,96 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.statusBar {
+  display: flex;
+  gap: 18px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+.warn {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.linear {
+  flex: 1;
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+  min-height: 0;
+}
+
+.linearCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.linearCell {
+  flex: 1;
+  min-height: 54px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-faint);
+  background: var(--bg-elevated);
+  border: 1.5px dashed var(--border-strong);
+  border-radius: 8px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cellFilled {
+  color: var(--text);
+  border-style: solid;
+}
+
+.cellFront {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
+.cellRear {
+  border-color: var(--accent-strong);
+}
+
+.linearMarker {
+  height: 18px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.linearIndex {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.ring {
+  flex: 1;
+  min-height: 200px;
+}
+
+.opNote {
+  font-size: 13px;
+  color: var(--text-muted);
+  min-height: 18px;
+}

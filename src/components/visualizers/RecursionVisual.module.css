@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  gap: 14px;
+  height: 100%;
+  min-height: 260px;
+}
+
+.tree {
+  flex: 1;
+  min-width: 0;
+}
+
+.stack {
+  width: 190px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .stack {
+    width: 150px;
+  }
+}

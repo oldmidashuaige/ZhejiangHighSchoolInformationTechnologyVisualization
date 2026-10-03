@@ -1,0 +1,101 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: auto;
+}
+
+.balance {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.balanceValue {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--accent-strong);
+  font-family: var(--font-mono);
+}
+
+.coins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.coin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.coinFace {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 700;
+  background: var(--bg-elevated);
+  border: 2px solid var(--border-strong);
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.coinTrying .coinFace {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.coinCount {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.resultLine {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 14px;
+}
+
+.resultLabel {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.resultText {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.optimal .resultText {
+  color: var(--accent-strong);
+}
+
+.warning {
+  font-size: 13px;
+  color: var(--text);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 12px;
+  line-height: 1.6;
+}
