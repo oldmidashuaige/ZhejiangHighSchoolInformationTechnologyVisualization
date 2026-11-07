@@ -31,3 +31,8 @@
   overflow: auto;
   padding: 20px 20px 0;
 }
+
+/* 大字号课堂模式：放大主内容区（含文字、图表），超出可滚动 */
+.largeFont {
+  zoom: 1.25;
+}

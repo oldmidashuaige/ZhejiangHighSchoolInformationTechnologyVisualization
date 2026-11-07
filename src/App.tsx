@@ -19,7 +19,6 @@ import HashPage from './pages/HashPage'
 import RadixPage from './pages/RadixPage'
 import CaesarPage from './pages/CaesarPage'
 import GreedyPage from './pages/GreedyPage'
-import SqlPage from './pages/SqlPage'
 import { getAlgorithm } from './algorithms/registry'
 import { useUI } from './store/ui'
 
@@ -41,7 +40,6 @@ const PAGE_MAP: Record<string, () => JSX.Element> = {
   radix: RadixPage,
   caesar: CaesarPage,
   greedy: GreedyPage,
-  sql: SqlPage,
 }
 
 function AlgoRoute() {

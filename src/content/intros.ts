@@ -348,22 +348,4 @@ export const INTROS: Record<string, AlgorithmIntro> = {
     },
     { heading: '考点', bullets: ['判断一个贪心策略是否正确（构造反例）', '"局部最优 ≠ 全局最优"是核心考点', '对比：贪心 vs 动态规划 的适用场景'] },
   ],
-
-  sql: [
-    {
-      heading: '算法思想',
-      text: 'SQL（结构化查询语言）用于对关系数据库中的表进行增删改查。一条 SELECT 查询由多个子句组成，执行顺序与书写顺序不同：先 FROM（取表）→ WHERE（筛选行）→ SELECT（选择列）→ ORDER BY（排序）。理解执行顺序是看懂复杂查询的关键。',
-    },
-    {
-      heading: '子句作用',
-      steps: [
-        { name: 'FROM', detail: '指定数据来自哪张表' },
-        { name: 'WHERE', detail: '逐行判断条件，只保留满足条件的行（先于 SELECT 执行）' },
-        { name: 'SELECT', detail: '从保留的行中挑选要输出的列' },
-        { name: 'ORDER BY', detail: '对结果按某列排序（DESC 降序 / ASC 升序），在 WHERE 之后' },
-      ],
-    },
-    { heading: '复杂度与补充', bullets: ['WHERE 一般需遍历（O(n)），有索引可加速', '常用：DISTINCT 去重、GROUP BY 分组、COUNT/SUM/AVG 聚合、JOIN 连接', '与 pandas（浙江选考结合）：筛选、排序、分组逻辑相通'] },
-    { heading: '考点', bullets: ['SQL 执行顺序、SELECT/WHERE/ORDER BY 组合', '字符串条件用单引号、数值比较的数据类型', '易错：WHERE 中不能用 SELECT 别名；ORDER BY 在 WHERE 后'] },
-  ],
 }

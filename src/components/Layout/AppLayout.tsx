@@ -28,7 +28,7 @@ export default function AppLayout({ theme, largeFont, onToggleTheme, onToggleFon
             <span className={styles.crumb}>{algo.title}</span>
           </header>
         )}
-        <div className={styles.content}>
+        <div className={`${styles.content} ${largeFont ? styles.largeFont : ''}`}>
           <Outlet />
         </div>
       </main>

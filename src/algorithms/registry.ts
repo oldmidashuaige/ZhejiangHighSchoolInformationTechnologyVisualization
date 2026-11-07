@@ -42,7 +42,6 @@ export const ALGORITHMS: AlgoMeta[] = [
   { id: 'radix', title: '进制转换', module: 'others', level: '常考', desc: '短除法 + 权重展开验证', available: true },
   { id: 'caesar', title: '凯撒密码', module: 'others', level: '常考', desc: '字符平移加密解密动画', available: true },
   { id: 'greedy', title: '贪心算法（找零）', module: 'others', level: '常考', desc: '局部最优未必全局最优，含反例演示', available: true },
-  { id: 'sql', title: 'SQL 数据查询', module: 'others', level: '必考', desc: 'SELECT / WHERE / ORDER BY 可视化', available: true },
 ]
 
 export function getAlgorithm(id: string): AlgoMeta | undefined {
