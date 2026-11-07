@@ -60,7 +60,7 @@ export function bubbleSortSteps(input: number[]): SortStep[] {
       const j2 = j + 1
       record({
         desc: `比较 arr[${j}] = ${v1} 与 arr[${j2}] = ${v2}`,
-        line: 5,
+        line: 6,
         compare: [j, j2],
         active: j,
       })
@@ -72,7 +72,7 @@ export function bubbleSortSteps(input: number[]): SortStep[] {
         swaps++
         record({
           desc: `arr[${j}] > arr[${j2}]，交换两元素 → [${arr.join(', ')}]`,
-          line: 6,
+          line: 7,
           swap: [j, j2],
         })
       }
@@ -92,7 +92,7 @@ export function bubbleSortSteps(input: number[]): SortStep[] {
   sorted.push(0)
   record({
     desc: `排序完成！比较 ${comparisons} 次，交换 ${swaps} 次。数组已升序排列：[${arr.join(', ')}]`,
-    line: 7,
+    line: 8,
     sorted: [...sorted],
     done: true,
   })

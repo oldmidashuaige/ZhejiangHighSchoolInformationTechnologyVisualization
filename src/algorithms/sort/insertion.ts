@@ -39,7 +39,7 @@ export function insertionSortSteps(input: number[]): SortStep[] {
     })
   }
 
-  record({ desc: `初始数组：[${arr.join(', ')}]，n = ${n}，左侧视为已排序区（初始只有 arr[0]）`, line: 1 })
+  record({ desc: `初始数组：[${arr.join(', ')}]，n = ${n}，左侧视为已排序区（初始只有 arr[0]）`, line: 3 })
 
   for (let i = 1; i < n; i++) {
     const keyId = keys[i] as number
@@ -48,7 +48,7 @@ export function insertionSortSteps(input: number[]): SortStep[] {
     keys[i] = null
     record({
       desc: `取出 arr[${i}] = ${keyVal} 作为 key，腾出空位（key 暂存在"手里"）`,
-      line: 4,
+      line: 5,
       key: keyVal,
       active: i,
       range: [0, i],
@@ -60,7 +60,7 @@ export function insertionSortSteps(input: number[]): SortStep[] {
       comparisons++
       record({
         desc: `比较 arr[${j}] = ${val(j)} 与 key = ${keyVal}`,
-        line: 6,
+        line: 7,
         compare: [j, j + 1],
         key: keyVal,
         active: j,
@@ -75,7 +75,7 @@ export function insertionSortSteps(input: number[]): SortStep[] {
         moves++
         record({
           desc: `arr[${j}] = ${val(j + 1)} > key，把它右移一位到 arr[${j + 1}]`,
-          line: 7,
+          line: 8,
           swap: [j, j + 1],
           key: keyVal,
           active: j + 1,
@@ -85,7 +85,7 @@ export function insertionSortSteps(input: number[]): SortStep[] {
       } else {
         record({
           desc: `arr[${j}] = ${val(j)} <= key，找到插入位置`,
-          line: 6,
+          line: 7,
           compare: [j, j + 1],
           key: keyVal,
           active: j,
@@ -100,7 +100,7 @@ export function insertionSortSteps(input: number[]): SortStep[] {
     keys[j + 1] = keyId
     record({
       desc: `把 key = ${keyVal} 插入到 arr[${j + 1}] → [${arr.join(', ')}]`,
-      line: 9,
+      line: 10,
       key: null,
       active: j + 1,
       range: [0, i],

@@ -39,14 +39,14 @@ export function selectionSortSteps(input: number[]): SortStep[] {
     })
   }
 
-  record({ desc: `初始数组：[${arr.join(', ')}]，n = ${n}，准备开始选择排序`, line: 1 })
+  record({ desc: `初始数组：[${arr.join(', ')}]，n = ${n}，准备开始选择排序`, line: 3 })
 
   for (let i = 0; i < n - 1; i++) {
     const pass = i + 1
     let k = i
     record({
       desc: `第 ${pass} 趟：在区间 [${i}, ${n - 1}] 中找最小值，先假设最小下标 k = ${i}`,
-      line: 4,
+      line: 5,
       minIndex: k,
       active: i,
       range: [i, n - 1],
@@ -56,7 +56,7 @@ export function selectionSortSteps(input: number[]): SortStep[] {
       comparisons++
       record({
         desc: `比较 arr[${j}] = ${val(j)} 与当前最小值 arr[${k}] = ${val(k)}`,
-        line: 6,
+        line: 7,
         compare: [k, j],
         minIndex: k,
         active: j,
@@ -66,7 +66,7 @@ export function selectionSortSteps(input: number[]): SortStep[] {
         k = j
         record({
           desc: `arr[${j}] = ${val(j)} 更小，更新最小下标 k = ${j}`,
-          line: 7,
+          line: 8,
           minIndex: k,
           active: j,
           range: [i, n - 1],
@@ -104,7 +104,7 @@ export function selectionSortSteps(input: number[]): SortStep[] {
   sorted.push(n - 1)
   record({
     desc: `排序完成！比较 ${comparisons} 次，交换 ${swaps} 次。数组已升序排列：[${arr.join(', ')}]`,
-    line: 11,
+    line: 10,
     sorted: [...sorted],
     done: true,
   })
